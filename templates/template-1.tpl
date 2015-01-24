@@ -21,7 +21,7 @@
 				<h1>{$post.name|upper}</h1>
 				<h2>{$post.id}</h2>
 				<h3>{$post.data|date_format:"%Y %m %d"}</h3>
-				<p>{$post.text}</p>
+				<p>{$post.text|truncate:300}</p>
 			</article>
 		{foreachelse}
 			<h1>Постов нет</h1>

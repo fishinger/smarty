@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 20:03:39
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 20:14:23
          compiled from "templates\template-1.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2959654c38243573a77-34529807%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0f45d7f12d71bdb3a55afde5982262978733c008' => 
     array (
       0 => 'templates\\template-1.tpl',
-      1 => 1422119017,
+      1 => 1422119662,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54c38243689038_09993662')) {function content_54c38243689038_09993662($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\OpenServer\\domains\\email\\libs\\plugins\\modifier.date_format.php';
+if (!is_callable('smarty_modifier_truncate')) include 'C:\\OpenServer\\domains\\email\\libs\\plugins\\modifier.truncate.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +58,7 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
 </h2>
 				<h3><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['post']->value['data'],"%Y %m %d");?>
 </h3>
-				<p><?php echo $_smarty_tpl->tpl_vars['post']->value['text'];?>
+				<p><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['post']->value['text'],300);?>
 </p>
 			</article>
 		<?php }
